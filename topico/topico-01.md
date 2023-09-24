@@ -9,7 +9,7 @@ Esclareça suas dúvidas.<br>
 
 2. **Na sua conta do GitHub**, criar um repositório necessariamente '**público**' de nome **bd-2023-2-bes**:
    - ou seja, letras minúsculas e hífen para separação: **bd**, **2023**, **2** e **bes**;
-   - então, a URL do repositório será https://github.com/contagithub/bd-2022-2-bes, onde _**contagithub**_ é conta do aluno no GitHub (por exemplo, a conta do professor no GitHub é _**plinioleitao**_).
+   - então, a URL do repositório será https://github.com/contagithub/bd-2023-2-bes, onde _**contagithub**_ é conta do aluno no GitHub (por exemplo, a conta do professor no GitHub é _**plinioleitao**_).
 
 3. Criar uma _issue_ no projeto https://github.com/plinioleitao/bd-2023-2-bes. Esta _issue_ irá identificar cada estudante da disciplina:
    - o título da _issue_ deve ser "Tópico 01";
