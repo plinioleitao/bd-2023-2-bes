@@ -1,4 +1,6 @@
-## Disciplina **BANCO DE DADOS**, Oferta 2023/2<br>[TEMPLATE]<br>Bem-vindo(a)!<br> 
+## Disciplina **BANCO DE DADOS**, Oferta 2023/2, BES 
+
+### Bem-vindo(a)!
 
 O plano da disciplina está disponível [aqui](./media/bd-2023-2-bes-plano.pdf).<br>
 
