@@ -1,6 +1,6 @@
 ## Disciplina **BANCO DE DADOS**, Oferta 2023/2<br>[TEMPLATE]<br>Bem-vindo(a)!<br> 
 
-O plano da disciplina está disponível [aqui](./media/bd-2023-2-bcc-plano.pdf).<br>
+O plano da disciplina está disponível [aqui](./media/bd-2023-2-bes-plano.pdf).<br>
 
 ### Para refletir...
 
