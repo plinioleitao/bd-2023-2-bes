@@ -10,10 +10,10 @@ O plano da disciplina está disponível [aqui](./media/bd-2023-2-bes-plano.pdf).
 
 ### Tópicos ativos
 
+- [Tópico 07](./topico/topico-07.md)
 - [Tópico 06b](./topico/topico-06b.md)
 - [Tópico 06a](./topico/topico-06a.md)
-- [Tópico 05](./topico/topico-05.md)
-- [Tópico 04](./topico/topico-04.md)
+- [Tópico 04b](./topico/topico-04b.md) - Requisitos **BD e-cred**
 - [Todos os tópicos](topico/topico-index.md)
 - [Análise das atividades]()
 
