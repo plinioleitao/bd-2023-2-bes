@@ -1,3 +1,5 @@
+[Tópico 10b](./topico-10b.md) - Modelo Relacional (MR) - Exercício (parte 2)<br>
+[Tópico 10a](./topico-10a.md) - Modelo Relacional (MR) - Exercício (parte 1)<br>
 [Tópico 09](./topico-09.md) - Modelo Relacional (MR) - Restrições de Integridade<br>
 [Tópico 08](./topico-08.md) - Modelo Relacional (MR) - Primeiros passos e _Checklist_<br>
 [Tópico 07](./topico-07.md) - Modelo de Dados<br>
