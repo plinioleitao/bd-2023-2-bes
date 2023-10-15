@@ -6,7 +6,8 @@ O plano da disciplina está disponível [aqui](./media/bd-2023-2-bes-plano.pdf).
 
 ### Para refletir...
 
-1. Qual a distinção entre dados e metadados?
+1. Qual a distinção entre relação e tabela?
+2. Como desenvolver um esquema de banco de dados relacional, que descreve o elenco de relações que comporão o banco de dados?
 
 ### Tópicos ativos
 
