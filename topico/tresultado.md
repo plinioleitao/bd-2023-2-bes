@@ -7,7 +7,7 @@ Clique [AQUI](../media/bd-2023-2-bes-resumo.pdf) para ver as notas.
 2. Apresentar exemplos de metadados, em vez de classificação de metadados. Os exemplos devem ser contextualizados, evitando respostas curtas que dão margem a abstração e ambiguidade (dado ou metadado?). Por exemplo: 'título de um livro', em vez de 'título'.
 
 #### Avaliação em 19/10/2023
-- Sobre definição, construção, manipulação e compartilhamento de banco de dados: a construção denota a armazenagem de dados em meio controlado pelo SGBD.
+- Sobre definição, construção, manipulação e compartilhamento de banco de dados -> a construção denota a armazenagem de dados em meio controlado pelo SGBD.
 - Quantas cópias do livro intitulado “Tribo Perdida” existem na unidade da biblioteca cujo nome é “Central”? -> LIVRO; LIVRO_COPIAS; UNIDADE_BIBLIOTECA.
 - Recupere o nome de todos os usuários que não possuem livros emprestados em seu nome. -> LIVROS_EMPRESTIMOS; USUARIO
 - Para cada livro que é emprestado da unidade da biblioteca cujo nome é “Central” e cuja data de devolução é hoje, recupere o título do livro, o nome e o endereço do usuário que pegou o livro emprestado.	-> LIVRO; LIVROS_EMPRESTIMOS; UNIDADE_BIBLIOTECA; USUARIO
