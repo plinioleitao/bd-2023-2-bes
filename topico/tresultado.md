@@ -14,3 +14,9 @@ Clique [AQUI](../media/bd-2023-2-bes-resumo.pdf) para ver as notas.
 - Para cada unidade da biblioteca, recupere o nome da unidade e o número total de livros emprestados pela unidade.	-> LIVROS_EMPRESTIMOS; UNIDADE_BIBLIOTECA
 - Recupere o nome, endereço e número de livros emprestados para todos os usuários que possuem mais de cinco livros emprestados.	-> LIVROS_EMPRESTIMOS; USUARIO
 - Para livro cujo autor (ou coautor) é “Stephen King”, recupere o título e o número de cópias pertencentes à unidade da biblioteca cujo nome é “Central”.	-> LIVRO; LIVRO_AUTOR; LIVRO_COPIAS; UNIDADE_BIBLIOTECA
+
+#### Avaliação em 26/10/2023
+
+1. RESULT ← π <sub>Pnome</sub> ( FUNCIONARIO ⋈ <sub>Cpf = Fcpf</sub> DEPENDENTE )
+1. AUX ← π <sub>Cpf_gerente</sub> ( FUNCIONARIO ⋈ <sub>Cpf_supervisor = Cpf_gerente</sub> DEPARTAMENTO )<br>RESULT ← π<sub>Pnome</sub> ( FUNCIONARIO ⋈ <sub>Cpf = Cpf_gerente</sub> AUX )
+1. RESULT ← π <sub>T1.Fcpf</sub> ( ρ <sub>T1</sub> (TRABALHA_EM) ⋈ <sub>T1.Fcpf = T2.Fcpf</sub> &#8743; <sub>T1.Pnr &#8800; T2.Pnr</sub> ρ <sub>T2</sub> (TRABALHA_EM) )
