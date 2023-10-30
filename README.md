@@ -11,6 +11,9 @@ O plano da disciplina está disponível [aqui](./media/bd-2023-2-bes-plano.pdf).
 
 ### Tópicos ativos
 
+- [Tópico 16a](./topico/topico-16a.md)
+- [Tópico 15](./topico/topico-15.md)
+- [Tópico 14](./topico/topico-14.md)
 - [Tópico 13b](./topico/topico-13b.md)
 - [Tópico 13a](./topico/topico-13a.md)
 - [Tópico 12](./topico/topico-12.md)
