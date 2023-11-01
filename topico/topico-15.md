@@ -33,4 +33,34 @@ Seja abaixo uma [*ilustração para o banco de dados*](../media/fig-mr-2.jpg) **
 1. ρ SUPERVISOR (π Cpf, Pnome (FUNCIONARIO) )<br>FUNCIONARIO &#8904; <sub>FUNCIONARIO.Cpf_supervisor = SUPERVISOR.Cpf</sub> SUPERVISOR
 1. ρ SUPERVISOR (Cpf_supervisor, Pnome_supervisor) (π Cpf, Pnome (FUNCIONARIO) )<br>π Pnome, Pnome_supervisor (FUNCIONARIO * SUPERVISOR ) 
 
-### _Under Construction_
+### Grupo 4: Motivador ++
+
+1. ℑ CONTA Cpf, SOMA Salario, MÉDIA Salario (FUNCIONARIO)
+1. Dnr ℑ CONTA Cpf, MÉDIA Salario (FUNCIONARIO)
+1. ρ RESULT (Identificacao_do_departamento, Quantidade_de_empregados, Salario_medio) (Dnr ℑ CONTA Cpf, MÉDIA Salario (FUNCIONARIO))
+1. RESUMO(Cpf, Qtde_depend)← Fcpf ℑ CONTA Fcpf (DEPENDENTE)<br>
+RESUMO_DOIS ← σ Qtde_depend >= 2 (RESUMO)<br>
+RESULT ← π Pnome, Unome (RESUMO_DOIS * FUNCIONARIO)
+1. SILVA ← σPnome=‘João’ AND Unome=‘Silva’(FUNCIONARIO)<br>
+PROJETOS_SILVA ← πPnr(TRABALHA_EM ⋈Fcpf=CpfSILVA)<br>
+PROJETOS_TODOS_FUNCS ← πFcpf, Pnr(TRABALHA_EM)<br>
+FUNC(Cpf) ← PROJETOS_TODOS_FUNCS ÷ PROJETOS_SILVA<br>
+RESULT ← πPnome, Unome(FUNC * FUNCIONARIO)<br>
+
+### Exercício - Importante principalmente para os alunos que buscam maior entendimento.
+
+Para cada das expressões acima, apresente:<br>
+**(i)** a consulta em língua portuguesa; e<br>
+**(ii)** o resultado da consulta, considerando o banco de dados da ilustração acima.<br>
+**DICAS:**<br>
+Veja os conteúdos apresentados nos tópicos.<br>
+Considere o exemplo abaixo.
+
+[Grupo 1] **Expressão 3:**<br>
+Qual o primeiro e o último nome dos funcionários de sexo feminino?
+
+|Pnome|Unome|
+|-|-|
+|Alice|Zelaya|
+|Jennifer|Souza|
+|Joice|Leite|
