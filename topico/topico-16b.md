@@ -15,6 +15,7 @@ RESULT ← π <sub>Projnome</sub> ( TEMP &#8904; <sub>Pnr=Projnumero</sub> PROJE
 CPF_SILVA ← π <sub>CPF</sub> ( σ <sub>Pnome="João" AND Unome="Silva"</sub> (FUNCIONARIO) )<br>
 PROJETOS_SILVA ← π <sub>Pnr</sub> ( CPF_SILVA &#8904; <sub>Cpf=Fcpf</sub> TRABALHA_EM )<br>
 CPFS ← π <sub>Fcpf</sub> ( PROJETOS_SILVA &#8904; <sub>PROJETOS_SILVA.Pnr=TRABALHA_EM.Pnr</sub> TRABALHA_EM )<br>
+RESULT ← π <sub>Pnome, Unome</sub> ( CPFS &#8904; <sub>Fcpf=Cpf</sub> FUNCIONARIO )
 1. Qual o nome das pessoas que não trabalham em qualquer dos projetos que o funcionário "João B Silva" trabalha em? Pessoas que não trabalham em qualquer projeto ESTÃO INCLUÍDAS no resultado da consulta.<br>
 1. Qual o nome das pessoas em que todos os projetos que trabalham em estão entre os projetos que o funcionário "João B Silva" trabalha em? Pessoas que não trabalham em qualquer projeto NÃO ESTÃO INCLUÍDAS no resultado da consulta.<br>
 
