@@ -5,7 +5,9 @@ Seja abaixo uma [*ilustração para o banco de dados*](../media/fig-mr-2.jpg) **
 
 <img src="../media/fig-mr-2.jpg" width="400">
 
-1. CPF_SILVA ← π <sub>CPF</sub> ( σ <sub>Pnome="João" AND Unome="Silva"</sub> (FUNCIONARIO) )
+1. CPF_SILVA ← π <sub>CPF</sub> ( σ <sub>Pnome="João" AND Unome="Silva"</sub> (FUNCIONARIO) )<br>
+FINAL ← π <sub>Nome_dependente</sub> ( σ <sub>Fcpf=CPF_SILVA</sub> (DEPENDENTE) )
+
 
 
 
