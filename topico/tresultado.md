@@ -20,3 +20,16 @@ Clique [AQUI](../media/bd-2023-2-bes-resumo.pdf) para ver as notas.
 1. RESULT ← π <sub>Pnome</sub> ( FUNCIONARIO ⋈ <sub>Cpf = Fcpf</sub> DEPENDENTE )
 1. AUX ← π <sub>Cpf_gerente</sub> ( FUNCIONARIO ⋈ <sub>Cpf_supervisor = Cpf_gerente</sub> DEPARTAMENTO )<br>RESULT ← π<sub>Pnome</sub> ( FUNCIONARIO ⋈ <sub>Cpf = Cpf_gerente</sub> AUX )
 1. RESULT ← π <sub>T1.Fcpf</sub> ( ρ <sub>T1</sub> (TRABALHA_EM) ⋈ <sub>T1.Fcpf = T2.Fcpf</sub> &#8743; <sub>T1.Pnr &#8800; T2.Pnr</sub> ρ <sub>T2</sub> (TRABALHA_EM) )
+
+#### Avaliação em 09/11/2023
+
+1. PRODUTO_CENTRAL ← π <sub>Produto</sub> ( σ <sub>Unidade="Central"</sub> ( FABRICA ) )<br>
+RESULT ← π <sub>Cliente</sub> ( PRODUTO_CENTRAL ⋈ <sub>PRODUTO_CENTRAL.Produto = USA.Produto</sub> USA )
+1. PRODUTO_CENTRAL ← π <sub>Produto</sub> ( σ <sub>Unidade="Central"</sub> ( FABRICA ) )<br>
+CLIENTE_CENTRAL ← π <sub>Cliente</sub> ( PRODUTO_CENTRAL ⋈ <sub>PRODUTO_CENTRAL.Produto = USA.Produto</sub> USA )<br>
+RESULT ← π <sub>Cliente</sub> ( USA )  &#8213; CLIENTE_CENTRAL
+1. PRODUTO_CENTRAL ← π <sub>Produto</sub> ( σ <sub>Unidade="Central"</sub> ( FABRICA ) )<br>
+PRODUTO_NAO_CENTRAL ← π <sub>Produto</sub> ( FABRICA ) &#8213; PRODUTO_CENTRAL<br>
+CLIENTE_NAO_CENTRAL ← π <sub>Cliente</sub> ( PRODUTO_NAO_CENTRAL ⋈ <sub>PRODUTO_NAO_CENTRAL.Produto = USA.Produto</sub> USA )<br>
+RESULT ← π <sub>Cliente</sub> ( USA )  &#8213; CLIENTE_NAO_CENTRAL
+
