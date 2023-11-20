@@ -33,3 +33,14 @@ PRODUTO_NAO_CENTRAL ← π <sub>Produto</sub> ( FABRICA ) &#8213; PRODUTO_CENTRA
 CLIENTE_NAO_CENTRAL ← π <sub>Cliente</sub> ( PRODUTO_NAO_CENTRAL ⋈ <sub>PRODUTO_NAO_CENTRAL.Produto = USA.Produto</sub> USA )<br>
 RESULT ← π <sub>Cliente</sub> ( USA )  &#8213; CLIENTE_NAO_CENTRAL
 
+#### Avaliação em 16/11/2023
+
+1. SELECT Pnome<br>FROM FUNCIONARIO JOIN DEPENDENTE<br>ON Cpf = Fcpf
+2. SELECT Pnome<br>FROM FUNCIONARIO JOIN TRABALHA_EM<br>ON Cpf = Fcpf
+3. SELECT PNOME
+FROM FUNCIONARIO JOIN 
+                     ( TRABALHA_EM AS T1 JOIN TRABALHA_EM AS T2
+                        ON T1.Fcpf = T2.Fcpf AND T1.Pnr ≠ T2.Pnr )
+            ON FUNCIONARIO.Cpf = T1.Fcpf )
+
+
