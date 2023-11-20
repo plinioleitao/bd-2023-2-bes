@@ -1,4 +1,4 @@
-## [Tópico T21] - SQL - DML (Data Manipulation Language): Funções Agregadas, Agrupamento de dados, Ordenação de Dados
+## [Tópico 21] - SQL - DML (Data Manipulation Language): Funções Agregadas, Agrupamento de dados, Ordenação de Dados
 ###### *by Prof. Plinio Sa Leitao-Junior (INF/UFG)*
 
 Os exemplos apresentados usam o esquema lógico do **BD Empresa**, conforme abaixo.
