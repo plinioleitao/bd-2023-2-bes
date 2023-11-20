@@ -37,6 +37,6 @@ RESULT ← π <sub>Cliente</sub> ( USA )  &#8213; CLIENTE_NAO_CENTRAL
 
 1. SELECT Pnome<br>FROM FUNCIONARIO JOIN DEPENDENTE<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ON Cpf = Fcpf
 2. SELECT Pnome<br>FROM FUNCIONARIO JOIN TRABALHA_EM<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ON Cpf = Fcpf
-3. SELECT PNOME<br>FROM FUNCIONARIO JOIN<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;( TRABALHA_EM AS T1 JOIN TRABALHA_EM AS T2<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ON T1.Fcpf = T2.Fcpf AND T1.Pnr ≠ T2.Pnr )<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ON FUNCIONARIO.Cpf = T1.Fcpf )
+3. SELECT PNOME<br>FROM FUNCIONARIO JOIN<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;( TRABALHA_EM AS T1 JOIN TRABALHA_EM AS T2<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ON T1.Fcpf = T2.Fcpf AND T1.Pnr != T2.Pnr )<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ON FUNCIONARIO.Cpf = T1.Fcpf
 
 
