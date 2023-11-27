@@ -1,4 +1,4 @@
-## [Tópico 04] - Requisitos de Dados - <ind>BD e-cred</ins>
+## [Tópico 04b] - Requisitos de Dados - <ind>BD e-cred</ins>
 ###### *by Prof. Plinio Sa Leitao-Junior (INF/UFG)*
 
 O <ins>acesso ao crédito</ins> é um bem importante e constitui um elemento de qualidade para a sociedade. A <ins>concessão de crédito</ins> é baseada em muitos componentes, tal como o <ins>cálculo de indicadores de crédito</ins>, por exemplo, o risco de inadimplência de pessoas e empresas.
