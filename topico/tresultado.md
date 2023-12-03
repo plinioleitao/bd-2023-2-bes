@@ -46,7 +46,7 @@ RESULT ← π <sub>Cliente</sub> ( USA )  &#8213; CLIENTE_NAO_CENTRAL
 
 #### Avaliação em 30/11/2023
 
-1. SELECT P.CodProd, P.Nome, SUM (VI.QtdeVenda), SUM (VI.QtdeVenda * P.Preco)<br>
+1. SELECT P.CodProd, P.Nome, SUM(VI.QtdeVenda), SUM(VI.QtdeVenda * P.Preco)<br>
 FROM PRODUTO AS P<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;JOIN VENDA_ITEM AS VI ON P.CodProd = VI.CodProd<br>
 GROUP BY P.CodProd, P.Nome
@@ -54,8 +54,8 @@ GROUP BY P.CodProd, P.Nome
 FROM PRODUTO AS P<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;JOIN VENDA_ITEM AS VI ON P.CodProd = VI.CodProd<br>
 GROUP BY P.CodProd, P.Nome<br>
-HAVING SUM (VI.QtdeVenda * P.Preco) > 10000
-1. SELECT C.CPF, C.Nome, SUM (VI.QtdeVenda), SUM (VI.QtdeVenda * P.Preco)<br>
+HAVING SUM(VI.QtdeVenda * P.Preco) > 10000
+1. SELECT C.CPF, C.Nome, SUM(VI.QtdeVenda), SUM(VI.QtdeVenda * P.Preco)<br>
 FROM CLIENTE AS C<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;JOIN VENDA AS V	ON C.CPF = V.CPF<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;JOIN VENDA_ITEM AS VI ON V.NumNF = VI.NumNF<br>
