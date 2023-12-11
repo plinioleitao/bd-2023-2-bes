@@ -61,3 +61,30 @@ FROM CLIENTE AS C<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;JOIN VENDA_ITEM AS VI ON V.NumNF = VI.NumNF<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;JOIN PRODUTO AS P ON VI.CodProd = P.CodProd<br>
 GROUP BY C.CPF, C.Nome
+
+#### Avaliação em 07/12/2023
+
+_Script_ do banco de dados:<br>
+CREATE TABLE VENDE ( Bar varchar(30), Cerveja varchar(30));<br>
+INSERT INTO VENDE VALUES ('Pipoca', 'Skol');<br>
+INSERT INTO VENDE VALUES ('Pipoca', 'Brahma');<br>
+INSERT INTO VENDE VALUES ('Pipoca', 'Antarctica');<br>
+INSERT INTO VENDE VALUES ('Pipoca', 'Spaten');<br>
+INSERT INTO VENDE VALUES ('Pipoca', 'Heineken');<br>
+INSERT INTO VENDE VALUES ('Alvorada', 'Skol');<br>
+INSERT INTO VENDE VALUES ('Alvorada', 'Bohemia');<br>
+INSERT INTO VENDE VALUES ('Alvorada', 'Brahma');<br>
+INSERT INTO VENDE VALUES ('Chapada', 'Amstel');<br>
+INSERT INTO VENDE VALUES ('Chapada', 'Erdinger');<br>
+CREATE TABLE GOSTA ( Pessoa varchar(30), Cerveja varchar(30));<br>
+INSERT INTO GOSTA VALUES ('Lia', 'Skol');<br>
+INSERT INTO GOSTA VALUES ('Lia', 'Bohemia');<br>
+INSERT INTO GOSTA VALUES ('Maria', 'Erdinger');<br>
+INSERT INTO GOSTA VALUES ('Maria', 'Amstel');<br>
+INSERT INTO GOSTA VALUES ('Pedro', 'Antarctica');<br>
+INSERT INTO GOSTA VALUES ('Pedro', 'Spaten');<br>
+INSERT INTO GOSTA VALUES ('Pedro', 'Brahma');<br>
+INSERT INTO GOSTA VALUES ('Ricardo', 'Heineken');
+
+
+1. SELECT P.CodProd, P.Nome
