@@ -86,5 +86,3 @@ INSERT INTO GOSTA VALUES ('Pedro', 'Spaten');<br>
 INSERT INTO GOSTA VALUES ('Pedro', 'Brahma');<br>
 INSERT INTO GOSTA VALUES ('Ricardo', 'Heineken');
 
-
-1. SELECT P.CodProd, P.Nome
