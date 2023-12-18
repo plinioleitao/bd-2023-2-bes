@@ -86,3 +86,9 @@ INSERT INTO GOSTA VALUES ('Pedro', 'Spaten');<br>
 INSERT INTO GOSTA VALUES ('Pedro', 'Brahma');<br>
 INSERT INTO GOSTA VALUES ('Ricardo', 'Heineken');
 
+#### Avaliação em 14/12/2023
+
+1. SELECT DISTINCT X.NOME FROM PACIENTE V JOIN MEDICO W JOIN MEDICAMENTO X JOIN CONSULTA Y JOIN PRESCRICAO Z ON V.CPF = Y.CPF AND W.CRM = Y.CRM AND Z.CPF = Y.CPF AND Z.DATAHORA = Y.DATAHORA AND Z.CODIGO = X.CODIGO WHERE V.NOME = W.NOME GROUP BY Y.CPF, Y.CRM, X.CODIGO, X.NOMEHAVING COUNT(*) > 1
+1. Pode ter valores repetidos nas tuplas de QUESTAO. Pode ter valor nulo em algumas das tuplas de QUESTAO. 
+1. A ordenação das tuplas de uma relação é indiferente, visto que uma relação é definida como um conjunto de tuplas. Uma tupla é uma lista ordenada de valores, então há uma posição relativa pré-definida para cada valor de atributo na tupla (por exemplo, o valor “13/02/2000”, pertinente ao atributo “data de nascimento”, é o terceiro valor na lista de valores de uma tupla).
+
