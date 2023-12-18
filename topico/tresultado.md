@@ -86,6 +86,13 @@ INSERT INTO GOSTA VALUES ('Pedro', 'Spaten');<br>
 INSERT INTO GOSTA VALUES ('Pedro', 'Brahma');<br>
 INSERT INTO GOSTA VALUES ('Ricardo', 'Heineken');
 
+1. SELECT DISTINCT Pessoa FROM GOSTA<br>
+WHERE Cerveja IN (<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SELECT Cerveja FROM VENDE WHERE Bar = 'Pipoca'<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;EXCEPT<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SELECT Cerveja FROM VENDE WHERE Bar != 'Pipoca' )
+
+
 #### Avaliação em 14/12/2023
 
 1. SELECT DISTINCT X.NOME FROM PACIENTE V JOIN MEDICO W JOIN MEDICAMENTO X JOIN CONSULTA Y JOIN PRESCRICAO Z ON V.CPF = Y.CPF AND W.CRM = Y.CRM AND Z.CPF = Y.CPF AND Z.DATAHORA = Y.DATAHORA AND Z.CODIGO = X.CODIGO WHERE V.NOME = W.NOME GROUP BY Y.CPF, Y.CRM, X.CODIGO, X.NOMEHAVING COUNT(*) > 1
