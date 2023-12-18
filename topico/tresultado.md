@@ -96,7 +96,10 @@ EXCEPT<br>
 SELECT Pessoa<br>
 FROM GOSTA NATURAL JOIN VENDE<br>
 WHERE Bar = 'Pipoca'
-
+1. SELECT DISTINCT Pessoa FROM GOSTA<br>
+EXCEPT<br>
+SELECT Pessoa FROM GOSTA WHERE Cerveja NOT IN (<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SELECT Cerveja FROM VENDE WHERE Bar = 'Pipoca' )
 
 #### Avaliação em 14/12/2023
 
