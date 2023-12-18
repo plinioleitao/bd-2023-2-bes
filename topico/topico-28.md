@@ -17,7 +17,7 @@ Responda as questões abaixo:
 Que alterações no esquema conceitual (DER) atendem às seguintes consultas:
    - Qual o valor vendido a cada cliente?
    - Qual o produto teve maior quantidade de itens vendidos em um dado período?
-   - Qual o preço unitário de venda de cada produto na data em que o mesmo foi vendido?### Requisitos de dados - BD Empresa
+   - Qual o preço unitário de venda de cada produto na data em que o mesmo foi vendido?
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Uma Solução para Reflexões 02](./topico-28solucao-02.md)
 
