@@ -91,6 +91,11 @@ WHERE Cerveja IN (<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SELECT Cerveja FROM VENDE WHERE Bar = 'Pipoca'<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;EXCEPT<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SELECT Cerveja FROM VENDE WHERE Bar != 'Pipoca' )
+1. SELECT Pessoa FROM GOSTA<br>
+EXCEPT<br>
+SELECT Pessoa<br>
+FROM GOSTA NATURAL JOIN VENDE<br>
+WHERE Bar = 'Pipoca'
 
 
 #### Avaliação em 14/12/2023
