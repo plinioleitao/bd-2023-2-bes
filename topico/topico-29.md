@@ -1,4 +1,4 @@
-## [Tópico T27] - Tempo para convergir ...
+## [Tópico 29] - Tempo para convergir ...
 ###### *by Prof. Plinio Sa Leitao-Junior (INF/UFG)*
 
 ```diff
@@ -10,17 +10,6 @@
 <hr style="border:2px solid blue">
 
 ### Exercício 01
-
-Foi solicitada a implementação de uma nova cláusula (função) para a SQL, denominada **UNIQUE**, que é avaliada como **True** quando a subconsulta não retornar _tuplas_ repetidas. Como esta cláusula ainda não foi implementada pelo SGBD, você poderia escrever uma **Consulta SQL Alternativa** para o exemplo abaixo?<br>(para melhor entendimento, veja a _Consulta SQL Alternativa_ do exemplo com a cláusula EXISTS): 
-
-|Consulta SQL Original|Consulta SQL Alternativa|Significado|
-|-|-|-|
-|SELECT Pnome, Unome<br>FROM FUNCIONARIO AS F<br>WHERE **EXISTS** (<br>&nbsp;&nbsp;SELECT Nome_dependente<br>&nbsp;&nbsp;FROM DEPENDENTE AS D<br>&nbsp;&nbsp;WHERE F.Cpf = D.Fcpf )|SELECT Pnome, Unome<br>FROM FUNCIONARIO AS F<br>WHERE 0 < (<br>&nbsp;&nbsp;SELECT COUNT(\*)<br>&nbsp;&nbsp;FROM DEPENDENTE AS D<br>&nbsp;&nbsp;WHERE F.Cpf = D.Fcpf )|Qual o primeiro e último nomes dos funcionários<br>que possuem algum dependente?|
-|SELECT Pnome, Unome<br>FROM FUNCIONARIO AS F<br>WHERE **UNIQUE** (<br>&nbsp;&nbsp;SELECT Nome_dependente<br>&nbsp;&nbsp;FROM DEPENDENTE AS D<br>&nbsp;&nbsp;WHERE F.Cpf = D.Fcpf )|    ???????????????|Qual o primeiro e último nomes dos funcionários<br>cujos dependentes não têm nomes repetidos?|
-
-<hr style="border:2px solid blue">
-
-### Exercício 02
 
 Considere o esquema de banco de dados sobre uma biblioteca descrito a seguir. Os atributos em negrito referem-se à chave primária de cada relação. 
 
@@ -65,15 +54,49 @@ A relação EMPRESTIMO (**CPF, ISBN, DataInicio**, DataFinalPrevista, DataFinalR
 (c) a quantidade de dias de atraso dos empréstimos devolvidos com atraso.<br>
 (d) o nome das editoras que mudaram de endereço mais de uma vez no último ano.<br>
 (e) Nenhum das alternativas anteriores.<br>
+
+<hr style="border:2px solid blue">
+
+### Exercício 02
+
+Escreva em SQL as operações (1), (2) e (3).
+
+|(1)|
+|-|
+|π <sub>Pnome, **F.Sexo**, Nome_dependente, **D.Sexo**</sub><br>&nbsp;&nbsp;&nbsp;&nbsp;(**ρ <sub>F</sub>** (FUNCIONARIO) ⨝ <sub>Cpf = Fcpf</sub> **ρ <sub>D</sub>** (DEPENDENTE))|
+
+|(2)|
+|-|
+|D(Cpf, Nome_dependente, Sexo_dependente) ←<br>&nbsp;&nbsp;&nbsp;&nbsp;π <sub>Fcpf, Nome_dependente, Sexo</sub> (DEPENDENTE)<br>RESULT ← π <sub>Pnome, Sexo, Nome_dependente, Sexo_dependente</sub> (FUNCIONARIO * D)|
+
+|(3)|
+|-|
+|FUNC(**Cpf**, Pnome_func, Unome_func) ← <br>&nbsp;&nbsp;&nbsp;&nbsp;π <sub>**Cpf_supervisor**, Pnome, Unome</sub> (FUNCIONARIO)<br>SUPER ← π <sub>Cpf, Pnome, Unome</sub> (FUNCIONARIO)<br>RESULT ← π <sub>Pnome_func, Unome_func, Pnome, Unome (FUNC * SUPER)|
+
 <hr style="border:2px solid blue">
 
 ### Exercício 03
 
-A atividade 
+Sobre os Requisitos de Dados para o BD e-cred no [Tópico 04b](./topico-04b.md), elabore um trecho do Diagrama Entidade Relacionamento (DER), conforme descrito abaixo. Faça um rascunho à mão, ou use a Ferramenta EERCASE.
+
+|Requisitos de Dados|
+|-|
+|**INDICADOR DE CRÉDITO**<br>Um <ins>indicador de crédito</ins> é um  <ins>componente para a tomada de decisão </ins> sobre a concessão de crédito.<br>&#x267B; Vários são os indicadores de crédito disponibilizados pelo **e-cred**, tais como:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ... _qualidade de cadastro_,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ... _carteira elegível para cobrança_,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ... dentre outros &#8252;<br>Se um associado solicitar:<br>&#x267B; <ins>Um indicador de crédito é calculado</ins> com relação a um cliente, para produzir um <ins>número decimal</ins>:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ... qual o valor para o indicador _qualidade de cadastro_ daquela pessoa?<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ... qual o valor para o indicador _carteira elegível para cobrança_ daquela pessoa?<br><br>**CONTRATAÇÃO DE INDICADOR DE CRÉDITO**<br>Se o associado <ins>contratar o direito de uso</ins> de um indicador de crédito:<br>&#x267B; O associado poderá fornecer [e usar] a sua <ins>fórmula específica</ins> de cálculo para esse indicador,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ... ou poderá utilizar a <ins>fórmula genérica</ins> (fórmula _default_) do indicador.<br>&#x267B; O <ins>cálculo do indicador de crédito</ins> referente a um cliente poderá ser solicitado pelo associado,<br>a qualquer tempo, para produzir um número decimal desse indicador em relação ao cliente.<br>&#x267B; O associado irá <ins>pagar um valor</ins> por cada cálculo solicitado de indicador.<br>&#x267B; Se um associado contratar um indicador, então há:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ... um valor a ser pago por solicitação; e<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ... uma quantidade mínima mensal de solicitações – uma franquia.|
 
 <hr style="border:2px solid blue">
 
 ### Exercício 04
+
+Foi solicitada a implementação de uma nova cláusula (função) para a SQL, denominada **UNIQUE**, que é avaliada como **True** quando a subconsulta não retornar _tuplas_ repetidas. Como esta cláusula ainda não foi implementada pelo SGBD, você poderia escrever uma **Consulta SQL Alternativa** para o exemplo abaixo?<br>(para melhor entendimento, veja a _Consulta SQL Alternativa_ do exemplo com a cláusula EXISTS): 
+
+|Consulta SQL Original|Consulta SQL Alternativa|Significado|
+|-|-|-|
+|SELECT Pnome, Unome<br>FROM FUNCIONARIO AS F<br>WHERE **EXISTS** (<br>&nbsp;&nbsp;SELECT Nome_dependente<br>&nbsp;&nbsp;FROM DEPENDENTE AS D<br>&nbsp;&nbsp;WHERE F.Cpf = D.Fcpf )|SELECT Pnome, Unome<br>FROM FUNCIONARIO AS F<br>WHERE 0 < (<br>&nbsp;&nbsp;SELECT COUNT(\*)<br>&nbsp;&nbsp;FROM DEPENDENTE AS D<br>&nbsp;&nbsp;WHERE F.Cpf = D.Fcpf )|Qual o primeiro e último nomes dos funcionários<br>que possuem algum dependente?|
+|SELECT Pnome, Unome<br>FROM FUNCIONARIO AS F<br>WHERE **UNIQUE** (<br>&nbsp;&nbsp;SELECT Nome_dependente<br>&nbsp;&nbsp;FROM DEPENDENTE AS D<br>&nbsp;&nbsp;WHERE F.Cpf = D.Fcpf )|    ???????????????|Qual o primeiro e último nomes dos funcionários<br>cujos dependentes não têm nomes repetidos?|
+
+<hr style="border:2px solid blue">
+
+### Exercício 05
 
 A atividade considera os requisitos de dados do **BD Passagens Aéreas**, conforme descrito a seguir.
 
