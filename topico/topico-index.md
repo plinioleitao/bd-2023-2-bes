@@ -1,3 +1,6 @@
+[Tópico 30](./topico-30.md) - Modelo Entidade Relacionamento (MER) - Exercício<br>
+[Tópico 29](./topico-29.md) - Modelo Entidade Relacionamento (MER) - Tempo para convergir ...<br>
+[Tópico 28](./topico-28.md) - Modelo Entidade Relacionamento (MER) - Exercício<br>
 [Tópico 27](./topico-27.md) - Modelo Entidade Relacionamento (MER) - Tipo de entidade fraca<br>
 [Tópico 26](./topico-26.md) - Modelo Entidade Relacionamento (MER) - Demanda informacional<br>
 [Tópico 25](./topico-25.md) - Modelo Entidade Relacionamento (MER) - Primeiros passos e _Checklist_<br>
